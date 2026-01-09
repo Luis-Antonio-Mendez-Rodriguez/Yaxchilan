@@ -7,8 +7,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hola esto es una prueba'),
-        backgroundColor: const Color.fromARGB(255, 55, 174, 75),
+        title: Text('Yaxchilan'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 97, 97, 97),
       ),
 
       body: Column(
@@ -17,11 +18,20 @@ class HomePage extends StatelessWidget {
             margin: EdgeInsets.only(top: 40,left: 20,right: 20),
             decoration: BoxDecoration(
               boxShadow: [
-                BoxShadow(color: const Color.fromARGB(255, 124, 124, 124))
-              ]
+                BoxShadow(color: const Color.fromARGB(255, 40, 40, 40))
+              ],
+              borderRadius: BorderRadius.circular(16)
             ),
             child: TextField(
-
+              decoration: const InputDecoration(
+                hintText: 'Example: https://www.youtube.com/watch?v=YourMusicVideoToDownload',
+                border: OutlineInputBorder(
+                  borderSide: BorderSide.none
+                )
+              ),
+              style: const TextStyle(
+                color: Color.fromARGB(255, 205, 205, 205)
+              ),
             )
           )
         ],
