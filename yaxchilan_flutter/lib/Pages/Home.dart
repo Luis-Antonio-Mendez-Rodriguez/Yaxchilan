@@ -13,7 +13,17 @@ class HomePage extends StatelessWidget {
 
       body: Column(
         children: [
-          TextField()
+          Container(
+            margin: EdgeInsets.only(top: 40,left: 20,right: 20),
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(color: const Color.fromARGB(255, 124, 124, 124))
+              ]
+            ),
+            child: TextField(
+
+            )
+          )
         ],
       ), 
     );
