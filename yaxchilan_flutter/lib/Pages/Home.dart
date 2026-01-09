@@ -5,6 +5,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hola esto es una prueba'),
+        backgroundColor: const Color.fromARGB(255, 55, 174, 75),
+      ),
+    );
   }
 }
