@@ -10,6 +10,12 @@ class HomePage extends StatelessWidget {
         title: Text('Hola esto es una prueba'),
         backgroundColor: const Color.fromARGB(255, 55, 174, 75),
       ),
+
+      body: Column(
+        children: [
+          TextField()
+        ],
+      ), 
     );
   }
 }
