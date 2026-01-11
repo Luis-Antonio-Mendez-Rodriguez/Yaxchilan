@@ -14,27 +14,34 @@ class HomePage extends StatelessWidget {
 
       body: Column(
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 40,left: 20,right: 20),
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(color: const Color.fromARGB(255, 40, 40, 40))
-              ],
-              borderRadius: BorderRadius.circular(16)
-            ),
-            child: TextField(
-              decoration: const InputDecoration(
-                hintText: 'Example: https://www.youtube.com/watch?v=YourMusicVideoToDownload',
-                border: OutlineInputBorder(
-                  borderSide: BorderSide.none
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Link',
+                  style: TextStyle(
+                  fontSize: 20,
+                  ),
                 )
               ),
-              style: const TextStyle(
-                color: Color.fromARGB(255, 205, 205, 205)
-              ),
-            )
-          )
-        ],
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  
+                ),
+              )
+            ],
+          ),
+        ]
       ), 
     );
   }
