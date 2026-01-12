@@ -36,17 +36,20 @@ class HomePage extends StatelessWidget {
           Row(//---------------------------------------------------------------------------------------------------------------Start of Link flied information
             children: [
               Container(
+                width: 150,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 124, 124, 124),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
-                  'Link',
-                  style: TextStyle(
-                  fontSize: 20,
+                child: Center(
+                  child: Text(
+                    'Link',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
+                )
               ),
               Expanded(child: Container(
                 padding: const EdgeInsets.all(12),
@@ -73,17 +76,20 @@ class HomePage extends StatelessWidget {
           Row(//---------------------------------------------------------------------------------------------------------------Start of Artist flied information
             children: [
               Container(
+                width: 150,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 124, 124, 124),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
-                  'Artist',
-                  style: TextStyle(
-                  fontSize: 20,
+                child: Center(
+                  child: Text(
+                    'Artist',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
+                )
               ),
               Expanded(child: Container(
                 padding: const EdgeInsets.all(12),
@@ -110,17 +116,20 @@ class HomePage extends StatelessWidget {
           Row(//---------------------------------------------------------------------------------------------------------------Start of Album flied information
             children: [
               Container(
+                width: 150,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 124, 124, 124),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
-                  'Album',
-                  style: TextStyle(
-                  fontSize: 20,
+                child: Center(
+                  child: Text(
+                    'Album',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
+                )
               ),
               Expanded(child: Container(
                 padding: const EdgeInsets.all(12),
@@ -147,17 +156,20 @@ class HomePage extends StatelessWidget {
           Row(//---------------------------------------------------------------------------------------------------------------Start of Song Position flied information
             children: [
               Container(
+                width: 150,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 124, 124, 124),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
-                  'Song Position',
-                  style: TextStyle(
-                  fontSize: 20,
+                child: Center(
+                  child: Text(
+                    'Song Positon',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
+                )
               ),
               Expanded(child: Container(
                 padding: const EdgeInsets.all(12),
@@ -184,17 +196,20 @@ class HomePage extends StatelessWidget {
           Row(//---------------------------------------------------------------------------------------------------------------Start of Gender flied information
             children: [
               Container(
+                width: 150,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 124, 124, 124),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(
-                  'Gender',
-                  style: TextStyle(
-                  fontSize: 20,
+                child: Center(
+                  child: Text(
+                    'Gender',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
+                )
               ),
               Expanded(child: Container(
                 padding: const EdgeInsets.all(12),
