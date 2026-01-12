@@ -6,7 +6,7 @@ Explanation:
 This code in flutter was made by someone who learned it in a 20 minute video, so sorry if there is any incovenience
 
 Structure
-appbar
+appbar-
 Body-
   Row-
     InformationField
