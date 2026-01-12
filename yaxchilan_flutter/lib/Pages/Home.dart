@@ -235,24 +235,21 @@ class HomePage extends StatelessWidget {
           ),//-----------------------------------------------------------------------------------------------------------------End of Gender flied information
           Row(//---------------------------------------------------------------------------------------------------------------strat of album cover button
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  //dooo stuffffffffffff
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 112, 112, 112),
-                  foregroundColor: Colors.black
-                ),
-                child: Text('Album cover')
-              ),
-              Container(
+              SizedBox(
                 width: 200,
                 height: 200,
-                padding: const EdgeInsets.all(12),
-                margin: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 124, 124, 124),
-                  borderRadius: BorderRadius.circular(10),
+                child: ElevatedButton(
+                  onPressed: () {
+                    //dooo stuffffffffffff
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 112, 112, 112),
+                    foregroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
+                  ),
+                  child: Text('Album cover')
                 ),
               ),
               ElevatedButton(
