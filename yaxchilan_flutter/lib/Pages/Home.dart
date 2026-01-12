@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
               ))
             ],
           ),//-----------------------------------------------------------------------------------------------------------------End of link flied information
-          Row(//---------------------------------------------------------------------------------------------------------------Start of Link flied information
+          Row(//---------------------------------------------------------------------------------------------------------------Start of Artist flied information
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  'Link',
+                  'Artist',
                   style: TextStyle(
                   fontSize: 20,
                   ),
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                     filled: true,
                     fillColor: const Color.fromARGB(255, 124, 124, 124),
                     contentPadding: EdgeInsets.all(15),
-                    hintText: 'Example: https://www.youtube.com/watch?v=Your-Video-Link'
+                    hintText: 'Example: Masayoshi Takanaka'
                   ),
                   style: TextStyle(
                     color: const Color.fromARGB(255, 0, 0, 0),
@@ -106,8 +106,152 @@ class HomePage extends StatelessWidget {
                 ),
               ))
             ],
-          ),//-----------------------------------------------------------------------------------------------------------------End of link flied information
-          
+          ),//-----------------------------------------------------------------------------------------------------------------End of Artist flied information
+          Row(//---------------------------------------------------------------------------------------------------------------Start of Album flied information
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Album',
+                  style: TextStyle(
+                  fontSize: 20,
+                  ),
+                ),
+              ),
+              Expanded(child: Container(
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 124, 124, 124),
+                    contentPadding: EdgeInsets.all(15),
+                    hintText: 'Example: Echoes'
+                  ),
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 18,
+                  ),
+                ),
+              ))
+            ],
+          ),//-----------------------------------------------------------------------------------------------------------------End of Album flied information
+          Row(//---------------------------------------------------------------------------------------------------------------Start of Song Position flied information
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Song Position',
+                  style: TextStyle(
+                  fontSize: 20,
+                  ),
+                ),
+              ),
+              Expanded(child: Container(
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 124, 124, 124),
+                    contentPadding: EdgeInsets.all(15),
+                    hintText: 'Example: 3'
+                  ),
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 18,
+                  ),
+                ),
+              ))
+            ],
+          ),//-----------------------------------------------------------------------------------------------------------------End of Song Position flied information
+          Row(//---------------------------------------------------------------------------------------------------------------Start of Gender flied information
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  'Gender',
+                  style: TextStyle(
+                  fontSize: 20,
+                  ),
+                ),
+              ),
+              Expanded(child: Container(
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: const Color.fromARGB(255, 124, 124, 124),
+                    contentPadding: EdgeInsets.all(15),
+                    hintText: 'Example: Experimental Rock'
+                  ),
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 18,
+                  ),
+                ),
+              ))
+            ],
+          ),//-----------------------------------------------------------------------------------------------------------------End of Gender flied information
+          Row(//---------------------------------------------------------------------------------------------------------------strat of album cover button
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  //dooo stuffffffffffff
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 112, 112, 112),
+                  foregroundColor: Colors.black
+                ),
+                child: Text('Album cover')
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 124, 124, 124),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  //dooo stuffffffffffff
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 112, 112, 112),
+                  foregroundColor: Colors.black
+                ),
+                child: Text('DOWNLOAD')
+              ),
+            ],
+          )//------------------------------------------------------------------------------------------------------------------End of album cover button and download button
         ]
       ), 
     );
