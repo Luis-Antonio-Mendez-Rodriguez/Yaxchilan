@@ -1,4 +1,4 @@
 # Yaxchilan
 A desktop software made to download music and write metadata on it(Name, Artist, Album, etc)
 
-Fronted its made in flutter, YT-DLP manages teh music download, and the metedata writing its handle in plain java.
+Fronted its made in flutter, YT-DLP manages the music download, and the metadata writing its handle in plain java.
