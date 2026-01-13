@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,8 +32,27 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 97, 97, 97),
       ),
 
-      
-      
+      body: StaggeredGrid.count(
+        crossAxisCount: 10,
+        children: [
+          StaggeredGridTile.count(
+            crossAxisCellCount: 7,
+            mainAxisCellCount: 3,
+            child: Container(color: Colors.red),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 3,
+            mainAxisCellCount: 3,
+            child: Container(color: Colors.green),
+          ),
+          StaggeredGridTile.count(
+            crossAxisCellCount: 10,
+            mainAxisCellCount: 1,
+            child: Container(color: Colors.blue),
+          ),
+        ],
+      ),
+
       
       /*
       body: Column(
