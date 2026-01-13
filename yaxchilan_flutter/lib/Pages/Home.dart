@@ -34,17 +34,268 @@ class HomePage extends StatelessWidget {
 
       body: StaggeredGrid.count(
         crossAxisCount: 10,
+
         children: [
           StaggeredGridTile.count(
-            crossAxisCellCount: 7,
-            mainAxisCellCount: 3,
-            child: Container(color: Colors.red),
+            crossAxisCellCount: 8,
+            mainAxisCellCount: 4,
+
+            child: Column(
+              children: [
+
+                Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Link',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: https://www.youtube.com/watch?v=Your-Video-Link'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                  ],
+                ),
+
+                Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Artist',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: Masayoshi Takanaka'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                  ],
+                ),
+
+                Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Album',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: All of me'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                  ],
+                ),
+
+                Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Song Position',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: 3'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                  ],
+                ),
+
+                Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Gender',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ),
+                    Expanded(child: Container(
+                      padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 124, 124, 124),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: Jazz Fusion'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                  ],
+                ),
+              ],
+            ),
           ),
+
           StaggeredGridTile.count(
-            crossAxisCellCount: 3,
-            mainAxisCellCount: 3,
-            child: Container(color: Colors.green),
+            crossAxisCellCount: 2,
+            mainAxisCellCount: 4,
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Text(
+                    'It is NOT neccesary for you to filled every field, you can leave some blank :D',
+                    style: TextStyle(
+                      color: Colors.blueGrey
+                    ),
+                  ),
+                  SizedBox(
+                    width: 200,
+                    height: 200,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //dooo stuffffffffffff
+                      },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 112, 112, 112),
+                      foregroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    child: Text('Album cover')
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      //dooo stuffffffffffff
+                    },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 112, 112, 112),
+                    foregroundColor: Colors.black
+                  ),
+                  child: Text('DOWNLOAD')
+                  ),
+                ],
+              ),
+            ),
           ),
+
           StaggeredGridTile.count(
             crossAxisCellCount: 10,
             mainAxisCellCount: 1,
@@ -57,6 +308,7 @@ class HomePage extends StatelessWidget {
       /*
       body: Column(
         children: [
+
           Row(//---------------------------------------------------------------------------------------------------------------Start of Link flied information
             children: [
               Container(
