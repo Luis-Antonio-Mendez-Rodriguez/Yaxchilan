@@ -6,7 +6,9 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 Explanation:
 This code in flutter was made by someone who learned it in a 20 minute video, so sorry if there is any incovenience.
 
-This Main structure is a staggered grid view divided in 3 sections.
+The whole structure ininside a statefull widget.
+There is a section 0 above everything else.
+The Main structure is a staggered grid view divided in 3 sections.
 
 ------------------------------------
 |              0                   |
@@ -16,23 +18,25 @@ This Main structure is a staggered grid view divided in 3 sections.
 |              1             |  2  |
 |                            |     |
 |                            |     |
-|-----------------------------------
+------------------------------------
 |               3                  |
 |                                  |
 ------------------------------------
 
-Section 0: This is the Appbar, it only holds the title ob the application.
-
+Section 0: This is the Appbar, it only holds the title of the application.
 Section 1: this is where all the information field for the metadata are written, the user is free to fill any field it wants, it is not nessesary to fill every single field.
-
 Section 2: This is where the album cover and download button exist, as well as some other extra options that will be avaliable later in development.
-
 Section 3: This is a shell viewer, so the user can see whats going on behind the front end.
-
 */
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
 //This the the start of the Appbar
   @override
   Widget build(BuildContext context) {
