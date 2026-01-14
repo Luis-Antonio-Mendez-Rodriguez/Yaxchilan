@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Yaxchilan',
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 19, 18, 19)),
-        scaffoldBackgroundColor: const Color.fromARGB(255, 20, 20, 19)
+        scaffoldBackgroundColor: const Color.fromARGB(255, 26, 26, 26)
       ),
       debugShowCheckedModeBanner: false,
       home: HomePage()
