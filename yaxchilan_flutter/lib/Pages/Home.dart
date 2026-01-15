@@ -29,29 +29,54 @@ Section 2: This is where the album cover and download button exist, as well as s
 Section 3: This is a shell viewer, so the user can see whats going on behind the front end.
 */
 
-/*
-Java Native Interface (JNI) → The main official API.
-
-C calling Java via JNI → Shows examples of C code invoking Java methods.
-
-JNI example pass variables → If you want to see how to send ints, strings, arrays, etc.
-
-AttachCurrentThread / JVM initialization JNI → Needed if your C code is running in a separate thread.
-
-Embedding JVM in C/C++ → If you want to run a JVM from scratch inside your C/C++ program.
-*/
-
-/*
-Official documentation
-
-Oracle’s JNI Documentation: Search “Java Native Interface Oracle docs”
-
-Java SE: “Java Native Interface Specification” PDF
-*/
-
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    var staggeredGrid = StaggeredGrid.count(
+      crossAxisCount: 10,
+      children: [
+        StaggeredGridTile.count(
+          crossAxisCellCount: 8,
+          mainAxisCellCount: 4,
+          child: Column(
+            children: [
+              Container(
+
+              ),
+              Container(
+
+              ),
+              Container(
+
+              ),
+              Container(
+
+              ),
+              Container(
+
+              ),
+              Container(
+                
+              )
+            ],
+          )
+        ),
+        StaggeredGridTile.count(
+          crossAxisCellCount: 2,
+          mainAxisCellCount: 4,
+          child: Container(color: Colors.green),
+        ),
+        StaggeredGridTile.count(
+          crossAxisCellCount: 10,
+          mainAxisCellCount: 10,
+          child: Container(color: Colors.blue),
+        ),
+      ],
+    );
+    return staggeredGrid;
+/*
 //This the the start of the Appbar
   @override
   Widget build(BuildContext context) {
@@ -347,5 +372,6 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+    */
   }
 }
