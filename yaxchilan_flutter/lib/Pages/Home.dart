@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -201,11 +202,17 @@ class HomePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     child: SizedBox(
-                      width: 200,
-                      height: 200,
+                      width: 150,
+                      height: 150,
                       child: ElevatedButton(
-                        onPressed: () {
-                          //dooo stuffffffffffff
+                        onPressed: () async {
+                          
+                          String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
+
+                            if (selectedDirectory == null) {
+                              // User canceled the picker
+                            }
+
                         },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color.fromARGB(255, 112, 112, 112),
