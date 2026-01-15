@@ -32,51 +32,7 @@ Section 3: This is a shell viewer, so the user can see whats going on behind the
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    var staggeredGrid = StaggeredGrid.count(
-      crossAxisCount: 10,
-      children: [
-        StaggeredGridTile.count(
-          crossAxisCellCount: 8,
-          mainAxisCellCount: 4,
-          child: Column(
-            children: [
-              Container(
 
-              ),
-              Container(
-
-              ),
-              Container(
-
-              ),
-              Container(
-
-              ),
-              Container(
-
-              ),
-              Container(
-                
-              )
-            ],
-          )
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 2,
-          mainAxisCellCount: 4,
-          child: Container(color: Colors.green),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 10,
-          mainAxisCellCount: 10,
-          child: Container(color: Colors.blue),
-        ),
-      ],
-    );
-    return staggeredGrid;
-/*
 //This the the start of the Appbar
   @override
   Widget build(BuildContext context) {
@@ -101,31 +57,14 @@ class HomePage extends StatelessWidget {
 
                 Row(
                   children: [
-                    Container(
-                      width: 150,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Link',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ),
                     Expanded(child: Container(
-                      padding: const EdgeInsets.all(12),
                       margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          labelText: 'Song URL',
                           filled: true,
                           fillColor: const Color.fromARGB(255, 124, 124, 124),
                           contentPadding: EdgeInsets.all(15),
@@ -133,7 +72,7 @@ class HomePage extends StatelessWidget {
                       ),
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   )),
@@ -142,24 +81,31 @@ class HomePage extends StatelessWidget {
 
                 Row(
                   children: [
-                    Container(
-                      width: 150,
-                      padding: const EdgeInsets.all(12),
+                    Expanded(child: Container(
+                      margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Artist',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
+                      child: TextField(
+                        decoration: InputDecoration(
+                          labelText: 'Song Name',
+                          filled: true,
+                          fillColor: const Color.fromARGB(255, 124, 124, 124),
+                          contentPadding: EdgeInsets.all(15),
+                          hintText: 'Example: Let You Break My Heart Again'
+                      ),
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 0, 0, 0),
+                        fontSize: 14,
+                      ),
                     ),
+                  )),
+                  ],
+                ),
+
+                Row(
+                  children: [
                     Expanded(child: Container(
-                      padding: const EdgeInsets.all(12),
                       margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 124, 124, 124),
@@ -167,6 +113,7 @@ class HomePage extends StatelessWidget {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          labelText: 'Artist Name',
                           filled: true,
                           fillColor: const Color.fromARGB(255, 124, 124, 124),
                           contentPadding: EdgeInsets.all(15),
@@ -174,7 +121,7 @@ class HomePage extends StatelessWidget {
                       ),
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   )),
@@ -183,24 +130,7 @@ class HomePage extends StatelessWidget {
 
                 Row(
                   children: [
-                    Container(
-                      width: 150,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Album',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ),
                     Expanded(child: Container(
-                      padding: const EdgeInsets.all(12),
                       margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 124, 124, 124),
@@ -208,14 +138,15 @@ class HomePage extends StatelessWidget {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          labelText: 'Album Name',
                           filled: true,
                           fillColor: const Color.fromARGB(255, 124, 124, 124),
                           contentPadding: EdgeInsets.all(15),
-                          hintText: 'Example: All of me'
+                          hintText: 'The Rainbow Goblins'
                       ),
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   )),
@@ -224,24 +155,7 @@ class HomePage extends StatelessWidget {
 
                 Row(
                   children: [
-                    Container(
-                      width: 150,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Song Position',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ),
                     Expanded(child: Container(
-                      padding: const EdgeInsets.all(12),
                       margin: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 124, 124, 124),
@@ -249,6 +163,7 @@ class HomePage extends StatelessWidget {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
+                          labelText: 'Track Number',
                           filled: true,
                           fillColor: const Color.fromARGB(255, 124, 124, 124),
                           contentPadding: EdgeInsets.all(15),
@@ -256,48 +171,7 @@ class HomePage extends StatelessWidget {
                       ),
                       style: TextStyle(
                         color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 18,
-                      ),
-                    ),
-                  )),
-                  ],
-                ),
-
-                Row(
-                  children: [
-                    Container(
-                      width: 150,
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Gender',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      )
-                    ),
-                    Expanded(child: Container(
-                      padding: const EdgeInsets.all(12),
-                      margin: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 124, 124, 124),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: const Color.fromARGB(255, 124, 124, 124),
-                          contentPadding: EdgeInsets.all(15),
-                          hintText: 'Example: Jazz Fusion'
-                      ),
-                      style: TextStyle(
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 18,
+                        fontSize: 14,
                       ),
                     ),
                   )),
@@ -318,7 +192,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     child: Text(
-                      'It is NOT neccesary for you to filled every field, you can leave some blank :D',
+                      'It is NOT neccesary to fill everything :D',
                       style: TextStyle(
                         color: Colors.blueGrey
                       ),
@@ -365,13 +239,12 @@ class HomePage extends StatelessWidget {
 //This is where sections 3 starts
           StaggeredGridTile.count(
             crossAxisCellCount: 10,
-            mainAxisCellCount: 1,
+            mainAxisCellCount: 10,
             child: Container(color: Colors.blue),
           ),
 //This is where sections 3 ends
         ],
       ),
     );
-    */
   }
 }
