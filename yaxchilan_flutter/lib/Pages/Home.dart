@@ -206,15 +206,22 @@ class HomePage extends StatelessWidget {
                     child: SizedBox(
                       width: 150,
                       height: 150,
-                      child: ElevatedButton(
+                      child: IconButton(
+                        icon: Image.asset('/home/luis/Escritorio/hola.jpg'),
+
                         onPressed: () async {
                           
-                          FilePickerResult? ImageDirectory = await FilePicker.platform.pickFiles();
+                          FilePickerResult? result = await FilePicker.platform.pickFiles();
 
-                          print(ImageDirectory?.paths);
+                          String ImageDirectory = result?.paths.toString() ?? '';
+                          ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
 
-                          if (ImageDirectory != null) {
-                            File file = File(ImageDirectory.files.single.path!);
+                          print(ImageDirectory);
+
+                          icon: Image.asset(ImageDirectory);
+
+                          if (result != null) {
+                            File file = File(result.files.single.path!);
                           } else {
                             // User canceled the picker
                           }
@@ -227,7 +234,7 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.zero,
                         ),
                       ),
-                      child: Text('Album cover')
+                      //child: Text('Album cover')
                       ),
                     ),
                   ),
