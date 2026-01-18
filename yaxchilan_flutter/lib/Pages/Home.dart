@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:path_provider/path_provider.dart';
 
 /*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -212,14 +213,11 @@ class HomePage extends StatelessWidget {
                         onPressed: () async {
                           
                           FilePickerResult? result = await FilePicker.platform.pickFiles();
-
                           String ImageDirectory = result?.paths.toString() ?? '';
                           ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
 
-                          print(ImageDirectory);
-
-                          icon: Image.asset(ImageDirectory);
-
+                          
+                          
                           if (result != null) {
                             File file = File(result.files.single.path!);
                           } else {
