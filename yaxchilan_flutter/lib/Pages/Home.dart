@@ -216,9 +216,9 @@ class HomePage extends StatelessWidget {
                           String ImageDirectory = result?.paths.toString() ?? '';
                           ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
                   
-                          final File file =File('/home/luis/Escritorio/SongMetadata.yax');
+                          final File file =File('Metadata/SongMetadata.yax');
 
-                          await file.writeAsString('hello, this is a test');
+                          await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
                           
                           if (result != null) {
                             File file = File(result.files.single.path!);
