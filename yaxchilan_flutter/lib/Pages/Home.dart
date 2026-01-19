@@ -215,8 +215,10 @@ class HomePage extends StatelessWidget {
                           FilePickerResult? result = await FilePicker.platform.pickFiles();
                           String ImageDirectory = result?.paths.toString() ?? '';
                           ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
+                  
+                          final File file =File('/home/luis/Escritorio/SongMetadata.yax');
 
-                          
+                          await file.writeAsString('hello, this is a test');
                           
                           if (result != null) {
                             File file = File(result.files.single.path!);
