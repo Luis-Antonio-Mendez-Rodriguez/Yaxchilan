@@ -208,7 +208,7 @@ class HomePage extends StatelessWidget {
                       width: 150,
                       height: 150,
                       child: IconButton(
-                        icon: Image.asset('/home/luis/Escritorio/hola.jpg'),
+                        icon: Image.asset('Metadata/AlbumCoverPlaceholder.jpg'),
 
                         onPressed: () async {
                           
@@ -217,7 +217,6 @@ class HomePage extends StatelessWidget {
                           ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
                   
                           final File file =File('Metadata/SongMetadata.yax');
-
                           await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
                           
                           if (result != null) {
