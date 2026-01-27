@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -242,6 +243,16 @@ class HomePage extends StatelessWidget {
 
                         final File file =File('Metadata/SongMetadata.yax');
                         await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
+
+                        final ScriptDirectory = File(Platform.script.toFilePath()).parent.path;
+                        final javaPath = '$ScriptDirectory/../java/Main.java';
+
+                        Future<void> calljava() async {
+                          final process = await Process.start(
+                            'java',
+                            ['-cp', javaPath, 'Main'],
+                          );
+                        }
                         
                       },
 
