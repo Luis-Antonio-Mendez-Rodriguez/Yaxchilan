@@ -215,9 +215,6 @@ class HomePage extends StatelessWidget {
                           FilePickerResult? result = await FilePicker.platform.pickFiles();
                           String ImageDirectory = result?.paths.toString() ?? '';
                           ImageDirectory = ImageDirectory.replaceAll('[', '').replaceAll(']', '');
-                  
-                          final File file =File('Metadata/SongMetadata.yax');
-                          await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
                           
                           if (result != null) {
                             File file = File(result.files.single.path!);
@@ -240,9 +237,14 @@ class HomePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(12),
                     child: ElevatedButton(
-                      onPressed: () {
-                        //dooo stuffffffffffff
+
+                      onPressed: () async {
+
+                        final File file =File('Metadata/SongMetadata.yax');
+                        await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
+                        
                       },
+
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 112, 112, 112),
                       foregroundColor: Colors.black
