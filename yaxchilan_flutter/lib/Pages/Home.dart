@@ -255,6 +255,8 @@ class HomePage extends StatelessWidget {
                         }
                         main();
                         
+                        //Going back to original working directory
+                        Directory.current = new Directory(original_working_directory);
                         
 
                       },
