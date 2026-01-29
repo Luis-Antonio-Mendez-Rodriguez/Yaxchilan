@@ -241,19 +241,22 @@ class HomePage extends StatelessWidget {
 
                       onPressed: () async {
 
-                        final File file =File('Metadata/SongMetadata.yax');
+                        final File file = File('Metadata/SongMetadata.yax');
                         await file.writeAsString('hello, this is a second tedt LOLLLLLLLLLLLLLL');
 
-                        final ScriptDirectory = File(Platform.script.toFilePath()).parent.path;
-                        final javaPath = '$ScriptDirectory/../java/Main.java';
+                        String original_working_directory = Directory.current.path;
+                        Directory.current = new Directory('Java');
 
-                        Future<void> calljava() async {
-                          final process = await Process.start(
-                            'java',
-                            ['-cp', javaPath, 'Main'],
-                          );
+
+                        main() async {
+                          // List all files in the current directory in UNIX-like systems.
+                          var result = await Process.run('java', ['Main']);
+                          print(result.stdout);
                         }
+                        main();
                         
+                        
+
                       },
 
                     style: ElevatedButton.styleFrom(
